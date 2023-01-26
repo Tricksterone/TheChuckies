@@ -12,7 +12,7 @@ namespace TheChuck.Pages.Tests
         public async Task OnGet_ShouldDisplayTextFromService()
         {
             //Arrange
-            var joke = new Joke() { Value = "Works"};
+            var joke = new Joke() { Value = "Works" };
             var sut = new IndexModel(NullLogger<IndexModel>.Instance, new JokeServiceFake(joke));
 
             //Act
@@ -35,13 +35,11 @@ namespace TheChuck.Pages.Tests
             Assert.AreEqual("Något gick fel. Försök igen lite senare.", sut.DisplayText);
         }
 
-        /*
-
         [TestMethod()]
         public async Task OnGet_ShouldBeUppecase()
         {
             //Arrange
-            var joke = new Joke() { Value = "Works"};
+            var joke = new Joke() { Value = "Works" };
             var pageModel = new IndexModel(NullLogger<IndexModel>.Instance, new JokeServiceFake(joke));
 
             //Act
@@ -50,7 +48,6 @@ namespace TheChuck.Pages.Tests
             //Assert
             Assert.AreEqual("WORKS", pageModel.DisplayText);
         }
-        */
 
     }
 }
